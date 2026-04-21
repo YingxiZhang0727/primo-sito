@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="350" height="500" viewBox="0 0 350 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Frame 1">
+            <rect width="350" height="500" fill="white" />
+            <rect id="Rett-C" x="119" y="333" width="73" height="73" fill="black" />
+            <rect id="Rett-B" x="62" y="55" width="73" height="73" fill="black" />
+            <rect id="Rett-A" x="209" y="184" width="73" height="73" fill="black" />
+        </g>
+    </svg>
+    <script type="module">
+        import { animate, set, utils } from "https://esm.sh/animejs";
+
+        set("svg *", {
+            transformOrigin: "center",
+            transformBox: "fill-box",
+        });
+
+        animate("rect", {
+            rotate: "+=360",
+            ease: "linear",
+            duration: 6000,
+            delay: 0,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
